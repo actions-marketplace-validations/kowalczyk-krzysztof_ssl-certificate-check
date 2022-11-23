@@ -1,0 +1,18 @@
+name: SSL Certificate Expiry Date Check
+description: "Check the validity of a SSL certificate for a given hostname"
+author: Krzysztof Kowalczyk
+inputs: 
+  certificate-hostname: 
+    description: "The hostname of that will be checked for a valid SSL certificate"
+    required: true
+outputs:
+  certificate-expiry-status: 
+    description: "The validity status of a SSL certificate"
+
+runs:
+  using: "node16"
+  main: "dist/index.js"
+
+branding:
+  icon: "alert-triangle"
+  color: "yellow"

@@ -1,0 +1,35 @@
+{
+  "name": "ssl-certificate-check",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Check the validity of a SSL certificate for a given hostname",
+  "main": "lib/main.js",
+  "scripts": {
+    "build": "tsc",
+    "lint": "eslint src/**/*.ts",
+    "package": "ncc build --source-map --license licenses.txt",
+    "all": "npm run build && npm run lint && npm run package"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+hhttps://github.com/kowalczyk-krzysztof/ssl-certificate-check.git"
+  },
+  "keywords": [
+    "ssl",
+    "certificate",
+    "validity"
+  ],
+  "author": "Krzysztof Kowalczyk",
+  "license": "MIT",
+  "dependencies": {
+    "@actions/core": "^1.10.0"
+  },
+  "devDependencies": {
+    "@types/node": "^18.11.9",
+    "@typescript-eslint/parser": "^5.44.0",
+    "@vercel/ncc": "^0.34.0",
+    "eslint": "^8.0.1",
+    "eslint-plugin-github": "^4.4.1",
+    "typescript": "^4.9.3"
+  }
+}
