@@ -8,7 +8,8 @@ The hostname of that will be checked for a valid SSL certificate as a string e.g
 
 ## Results
 
-A string containing expiry date e.g `Expiry date: Jan 25 13:43:08 2023 GMT` or `Certificate is invalid` on error
+On success logs a string containing expiry date e.g `Certificate valid until: Jan 25 13:43:08 2023 GMT`.
+On error sets the step status to failed and logs the error
 
 ## Example usage
 

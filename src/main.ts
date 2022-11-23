@@ -8,15 +8,12 @@ const options = {
   path: '/'
 }
 
-const setOutput = (validTo?: string): void =>
-  core.info(validTo ? `Expiry date: ${validTo}` : 'Certificate is invalid')
-
 const req = https.request(options, res => {
   const {valid_to} = (res.socket as TLSSocket).getPeerCertificate()
-  setOutput(valid_to)
+  core.info(`Certificate valid until: ${valid_to}`)
 })
 
 req.end()
-req.on('error', _ => {
-  setOutput()
+req.on('error', e => {
+  core.setFailed(e)
 })
