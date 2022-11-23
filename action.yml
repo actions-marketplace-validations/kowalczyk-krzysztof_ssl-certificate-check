@@ -3,7 +3,7 @@ description: "Check the validity of a SSL certificate for a given hostname"
 author: Krzysztof Kowalczyk
 inputs: 
   certificate-hostname: 
-    description: "The hostname of that will be checked for a valid SSL certificate"
+    description: "The hostname that will be checked for a valid SSL certificate"
     required: true
 
 runs:

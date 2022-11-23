@@ -4,7 +4,7 @@
 
 ### `certificate-hostname`
 
-The hostname of that will be checked for a valid SSL certificate as a string e.g `google.com`
+The hostname that will be checked for a valid SSL certificate as a string e.g `google.com`
 
 ## Results
 
