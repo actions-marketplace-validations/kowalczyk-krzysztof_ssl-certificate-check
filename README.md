@@ -1,4 +1,4 @@
-# SSL Certificate Validity Check
+# SSL Certificate Expiry Date Check
 
 ## Inputs
 
@@ -6,13 +6,11 @@
 
 The hostname of that will be checked for a valid SSL certificate as a string e.g `google.com`
 
-## Outputs
+## Results
 
-### `certificate-expiry-status`
+A string containing expiry date e.g `Expiry date: Jan 25 13:43:08 2023 GMT` or `Certificate is invalid` on error
 
-The validity status of a SSL certificate as a string
-
-## Example
+## Example usage
 
 ```yaml
 uses: kowalczyk-krzysztof/ssl-certificate-check@v1
